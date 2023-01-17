@@ -3,7 +3,7 @@
 const ApiConstants = {
     // BASE_URL:''https://techeruditedev.xyz/projects/plie-api/public/api/',
     LOGIN: 'https://techeruditedev.xyz/projects/plie-api/public/api/login',
-    MOVIELIST: 'https://techeruditedev.xyz/projects/plie-api/public/api/events-listing',
+    EVENTLIST: 'https://techeruditedev.xyz/projects/plie-api/public/api/events-listing',
 };
 
 export default ApiConstants;

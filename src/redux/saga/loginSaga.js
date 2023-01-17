@@ -21,9 +21,9 @@ export default function* loginAsync(action) {
   } else {
     yield put(loginActions.loginFailed());
     yield put(loginActions.disableLoader({}));
-    action.navigation.reset({
-      routes: [{name: 'BottomTab'}],
-    });
+    // action.navigation.reset({
+    //   routes: [{name: 'BottomTab'}],
+    // });
     setTimeout(() => {
       Alert.alert('Login failed', response.error);
     }, 200);

@@ -6,18 +6,19 @@ export default async function api(path, params, method, token) {
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
-      ...(token && { token: token }),
+      ...(token && {token: token}),
     },
     method: method,
-    ...(params && { body: JSON.stringify(params) }),
+    ...(params && {body: JSON.stringify(params)}),
   };
-  console.log("Body: "+JSON.stringify(params))
-  console.log("path"+path)
+
   try {
     const resp = await fetch(path, options);
     const json = await resp.json();
+
     return json;
   } catch (error) {
+    console.log('--error--', error);
     return error;
   }
 }

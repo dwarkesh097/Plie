@@ -12,7 +12,7 @@ import {
   Alert,
 } from 'react-native';
 import InputBox from '../../components/inputbox';
-import image from '../../assets/images/puppy.jpg';
+import image from '../../assets/images/eventBg.jpg';
 import SocialCard from '../../components/socialcard';
 import {useSelector, useDispatch} from 'react-redux';
 import * as loginActions from '../../redux/actions/loginActions';
@@ -23,8 +23,6 @@ const Login = ({navigation}) => {
   const [password, setPassword] = useState('');
 
   const dispatch = useDispatch();
-  const counter = useSelector(state => state);
-  // console.warn('count--', counter);
 
   const emailInputValue = value => {
     setEmail(value);
@@ -97,16 +95,17 @@ const Login = ({navigation}) => {
                 </Text>
               </TouchableOpacity>
             </View>
-            <View
-              style={{
-                flexDirection: 'row',
-                alignSelf: 'center',
-                marginTop: 70,
-              }}>
+            <View style={styles.signWithContainer}>
+              <View style={styles.borderStart} />
               <Text style={styles.signWith}>or Sign In with:</Text>
+              <View style={styles.borderEnd} />
             </View>
           </View>
-          <View style={{flexDirection: 'row', alignSelf: 'center'}}>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignSelf: 'center',
+            }}>
             <SocialCard
               width={20}
               height={20}
@@ -123,7 +122,9 @@ const Login = ({navigation}) => {
               path={require('../../assets/images/facebook.png')}
             />
           </View>
-          <Text style={styles.guest}>Enter as Guest</Text>
+          <TouchableOpacity>
+            <Text style={styles.guest}>Enter as Guest</Text>
+          </TouchableOpacity>
         </ScrollView>
       </KeyboardAvoidingView>
     </View>

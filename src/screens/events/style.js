@@ -6,7 +6,9 @@ export const styles = StyleSheet.create({
       backgroundColor: '#dedcdc',
     },
     container: {
+      flex:1,
       paddingHorizontal: 10,
+      // marginBottom:3
     },
     text: {
       color: '#000',

@@ -3,8 +3,6 @@ import {StyleSheet} from 'react-native';
 export const styles = StyleSheet.create({
   main: {
     flex: 1,
-    borderWidth: 1,
-    borderColor: 'red',
   },
   image: {
     width: '100%',
@@ -15,7 +13,6 @@ export const styles = StyleSheet.create({
     fontSize: 60,
     fontFamily: 'Roboto-Medium',
     marginTop: 15,
-    color: '#000',
   },
   container: {
     flex: 1,
@@ -63,6 +60,22 @@ export const styles = StyleSheet.create({
     color: '#4F4F4F',
     fontFamily: 'Roboto',
     marginBottom: 35,
+  },signWithContainer:{
+    flexDirection: 'row',
+    alignSelf: 'center',
+    marginTop: 70,
+  },
+  borderStart: {
+    borderTopWidth: 2,
+    width: '33%',
+    marginEnd: 7,
+    marginTop: 9,
+  },
+  borderEnd: {
+    borderTopWidth: 2,
+    width: '33%',
+    marginStart: 7,
+    marginTop: 9,
   },
   underLine: {
     textDecorationLine: 'underline',

@@ -4,9 +4,9 @@
 import { takeEvery, all } from 'redux-saga/effects';
 import * as types from '../types';
 import loginSaga from './loginSaga';
-import moviesSaga from './moviesSaga';
+import eventsSaga from './eventsSaga';
 
 export default function* watch() {
   yield all([takeEvery(types.LOGIN_REQUEST, loginSaga)]);
-  yield all([takeEvery(types.MOVIES_REQUEST, moviesSaga)]);
+  yield all([takeEvery(types.EVENT_REQUEST, eventsSaga)]);
 }
